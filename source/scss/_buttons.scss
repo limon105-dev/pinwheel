@@ -1,0 +1,64 @@
+/* Button style */
+.btn {
+  font-size: 1rem;
+  font-family: $font-secondary;
+  text-transform: capitalize;
+  padding: 0.8em 1.9em;
+  border-radius: 3.1em;
+  border: none;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.2s ease;
+
+  &:hover,
+  &.active,
+  &.active,
+  &:focus,
+  &.focus {
+    outline: 0;
+    background-color: transparent;
+    border-color: transparent;
+  }
+}
+
+.btn-check:checked + .btn,
+:not(.btn-check) + .btn:active,
+.btn:first-child:active,
+.btn.active,
+.btn.show {
+  color: #fff;
+}
+
+// button primary
+.btn-primary {
+  background: $gradient-secondary;
+  color: $white;
+  font-weight: 500;
+  box-shadow: 0px 5px 30px rgba(252, 167, 111, 0.5);
+
+  &:hover,
+  &:active,
+  &.active,
+  &:focus,
+  &.focus {
+    box-shadow: 0px 5px 30px rgba(252, 167, 111, 0.8);
+    transform: translateY(-4px);
+  }
+}
+
+// button outline primary
+.btn-outline-primary {
+  background: transparent;
+  color: $text-color;
+  border-color: $color-primary;
+
+  &:hover,
+  &:active,
+  &.active,
+  &:focus,
+  &.focus {
+    background: $color-primary !important;
+    border-color: $color-primary !important;
+    color: $white;
+  }
+}
